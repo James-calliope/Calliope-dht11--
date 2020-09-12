@@ -1,7 +1,7 @@
 {
     "name": "pxt-dht11",
     "version": "0.0.1",
-    "description": "",
+    "description": "DHT11 Temperature & Humidity Sensor",
     "dependencies": {
         "core": "*",
         "radio": "*"
