@@ -1,10 +1,11 @@
 // Originalpaket von
 // https://github.com/lioujj/pxt-DHT11
+// angepasst an Calliope mini M. Klein 13.09.2020
 // MIT License
 
 //% color=#2159b2 icon="\uf2c9" block="DHT11"
 namespace DHT11 {
-    let pin = DigitalPin.P0;
+    let pin = DigitalPin.C16;
     let init = false;
     function dht11Request(): void {
         pins.digitalWritePin(pin, 0)
@@ -15,7 +16,8 @@ namespace DHT11 {
     }
 
 
-    //% blockId=setPin block="DHT11 an Pin %myPin"
+    //% blockId=setPin block="DHT11 at pin %myPin"
+    //% myPin.defl=DigitalPin.C16
     //% myPin.fieldEditor="gridpicker" myPin.fieldOptions.columns=4
     //% myPin.fieldOptions.tooltips="false" myPin.fieldOptions.width="300"
     export function setPin(myPin: DigitalPin): void {
@@ -24,7 +26,7 @@ namespace DHT11 {
     }
 
 
-    //% blockId=temperature block="Temperatur in ˚C"       
+    //% blockId=temperature block="temperature in ˚C"       
     export function temperature(): number {
         if (init) {
             dht11Request();
@@ -52,7 +54,7 @@ namespace DHT11 {
             return 0;
     }
 
-    //% blockId=humidity block="prozentuale Luftfeuchtigkeit"
+    //% blockId=humidity block="humidity in percent"
     export function humidity(): number {
         if (init) {
             dht11Request();
