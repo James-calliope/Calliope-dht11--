@@ -5,7 +5,7 @@
 
 //% color=#2159b2 icon="\uf2c9" block="DHT11"
 namespace DHT11 {
-    let pin = DigitalPin.C16;
+    let pin = 9; // C16
     let init = false;
     function dht11Request(): void {
         pins.digitalWritePin(pin, 0)
