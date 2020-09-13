@@ -8,9 +8,8 @@
     },
     "files": [
         "README.md",
-        "main.blocks",
-        "main.ts",
-        "dht11.ts"
+        "dht11.ts",
+        "_locales/de/pxt-dht11-strings.json"
     ],
     "testFiles": [],
     "public": true,
