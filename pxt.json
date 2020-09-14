@@ -1,7 +1,7 @@
 {
-    "name": "pxt-dht11",
+    "name": "Dht11温湿度传感器",
     "version": "0.0.3",
-    "description": "DHT11 Temperature & Humidity Sensor",
+    "description": "DHT11温湿度传感器扩展库汉化版",
     "dependencies": {
         "core": "*",
         "radio": "*"
@@ -14,7 +14,7 @@
     "testFiles": [],
     "public": true,
     "supportedTargets": [
-        "microbit"
+        "Calliope mini & microbit"
     ],
     "preferredEditor": "tsprj"
 }
