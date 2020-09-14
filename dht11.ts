@@ -3,7 +3,7 @@
 // angepasst an Calliope mini M. Klein 13.09.2020
 // MIT License
 
-//% color=#2159b2 icon="\uf2c9" block="DHT11"
+//% color=#2159b2 icon="\uf2c9" block="DHT11温湿度传感器"
 namespace DHT11 {
     let pin = 9; // C16
     let init = false;
@@ -16,7 +16,7 @@ namespace DHT11 {
     }
 
 
-    //% blockId=setPin block="DHT11 at pin %myPin"
+    //% blockId=setPin block="DHT11引脚设置 %myPin"
     //% myPin.defl=DigitalPin.C16
     //% myPin.fieldEditor="gridpicker" myPin.fieldOptions.columns=4
     //% myPin.fieldOptions.tooltips="false" myPin.fieldOptions.width="300"
@@ -26,7 +26,7 @@ namespace DHT11 {
     }
 
 
-    //% blockId=temperature block="temperature in ˚C"       
+    //% blockId=temperature block="读取温度信息（单位：摄氏度）"       
     export function temperature(): number {
         if (init) {
             dht11Request();
@@ -54,7 +54,7 @@ namespace DHT11 {
             return 0;
     }
 
-    //% blockId=humidity block="humidity in percent"
+    //% blockId=humidity block="读取湿度信息（百分比）"
     export function humidity(): number {
         if (init) {
             dht11Request();
